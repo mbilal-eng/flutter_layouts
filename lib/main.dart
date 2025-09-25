@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layouts/widgets/my_container.dart';
+import 'package:flutter_layouts/widgets/my_image.dart';
+import 'package:flutter_layouts/widgets/my_richtext.dart';
+import 'package:flutter_layouts/widgets/my_text.dart';
+import 'package:flutter_layouts/widgets/my_wrap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,34 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
-  }
-}
-
-class MyStateFulWidget extends StatefulWidget {
-  const MyStateFulWidget({super.key});
-
-  @override
-  State<MyStateFulWidget> createState() => _MyStateFulWidgetState();
-}
-
-class _MyStateFulWidgetState extends State<MyStateFulWidget> {
-  int counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext contexxt) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text("Button pressed $counter times"),
-        ElevatedButton(onPressed: _incrementCounter, child: Text("Press Me")),
-      ],
+    return MaterialApp(
+      title: "Explore Layouts Widgets in Flutter",
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+      ),
+      home: MyWrap(),
     );
   }
 }
