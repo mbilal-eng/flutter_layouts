@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layouts/screens/profile_screen.dart';
 import 'package:flutter_layouts/widgets/my_container.dart';
 import 'package:flutter_layouts/widgets/my_image.dart';
 import 'package:flutter_layouts/widgets/my_richtext.dart';
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Explore Layouts Widgets in Flutter",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: MyWrap(),
+      home: ProfileScreen(),
     );
   }
 }
