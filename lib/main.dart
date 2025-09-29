@@ -6,6 +6,8 @@ import 'package:flutter_layouts/widgets/my_image.dart';
 import 'package:flutter_layouts/widgets/my_richtext.dart';
 import 'package:flutter_layouts/widgets/my_text.dart';
 import 'package:flutter_layouts/widgets/my_wrap.dart';
+import 'package:flutter_layouts/widgets/navigation_widgets/my_bottom_appbar.dart';
+import 'package:flutter_layouts/widgets/navigation_widgets/my_tabbar.dart';
 import 'package:flutter_layouts/widgets/navigation_widgets/mydrawer.dart';
 
 void main() {
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: MyDrawer(),
+      home: MyTabbar(),
     );
   }
 }
